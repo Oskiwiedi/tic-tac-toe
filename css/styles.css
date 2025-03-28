@@ -1,6 +1,8 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color:black;
+    text-align: center;
+    justify-content: center; 
 }
 
 #start-screen {
@@ -10,7 +12,10 @@ body{
     flex-direction: column;
     border-style: solid;
     border-color: aliceblue;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 550px;
+    background-color: #555555;
+    padding: 15px;
 }
 
 form {
@@ -22,7 +27,7 @@ form {
 
 h1{
     font-size: 100px;
-    color: red;
+    color: #ffffff;
     text-align: center;
 }
 
