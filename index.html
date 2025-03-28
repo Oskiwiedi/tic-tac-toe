@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-Tac-Toe</title>
-</head>
-<body>
-    <h1>Tic-Tac-Toe</h1>
-    <div id="start-screen">
-        <ul>
-            <div>
-            <p>Name Spieler 1</p>
-            <p>Name Spieler 2</p>
-            <p>Spiel starten</p>
-            
-        </ul>
-    </div>
-</body>
+    <head>
+        <link rel="stylesheet" href="css/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tic-Tac-Toe</title>
+    </head>
+    <body>
+        <div id="start-screen">
+            <h1>Tic-Tac-Toe</h1>
+            <form action="spiel-html" method="GET">
+                <input type="text" name="spieler1" placeholder="Spieler 1" required>
+                <input type="text" name="spieler2" placeholder="Spieler 2" required>
+                <button>Spiel starten</button>
+            </form>
+        </div>
+    </body>
 </html>

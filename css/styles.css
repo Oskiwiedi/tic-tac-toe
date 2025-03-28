@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:black;
+}
+
+#start-screen {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    border-style: solid;
+    border-color: aliceblue;
+    border-radius: 5px;
+}
+
+form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+h1{
+    font-size: 100px;
+    color: red;
+    text-align: center;
+}
+
+
+
+
+
+
