@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="css/styles.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/functions.js"></script>
     </head>
     <body>
         <div id="start-screen">
             <h1 class="logo-image">Tic-Tac-Toe</h1>
-            <form action="index.html" method="POST">
-                <input type="text" name="spieler1" placeholder="Name Spieler 1" required />
-                <input type="text" name="spieler2" placeholder="Name Spieler 2" required />
+            <form action="index.html" method="GET">
+                <input type="text" name="name-player-1" placeholder="Name Spieler 1" required />
+                <input type="text" name="name-player-2" placeholder="Name Spieler 2" required />
                 <input type="hidden" name="status" value="start-game" />
                 <button>SPIEL STARTEN</button>
             </form>
