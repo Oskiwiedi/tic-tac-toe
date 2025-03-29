@@ -36,11 +36,13 @@ input, button {
     margin: 10px;
     border-radius: 10px;
     border: 1px;
+    font-size: 20px;
 }
 
 button {
     background-color: #aaaaaa;
     border: 2px solid #ffffff;
+    font-weight: bold;
 }
 
 
