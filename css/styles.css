@@ -12,15 +12,23 @@ body{
     border-color: aliceblue;
     border-radius: 10px;
     width: 550px;
-    background-color: #333333;
+    background-color: #3A3A3C;
     padding: 15px;
     margin: 100px auto;
 }
 
-h1{
-    font-size: 80px;
+h1 {
+    font-size: 70px;
     color: #ffffff;
     text-align: center;
+}
+
+.logo-image {
+    background-image: url("../img/logo_kreis.png");
+    background-size: 80px;
+    background-repeat: no-repeat;
+    padding-left: 80px;
+
 }
 
 form {
@@ -36,13 +44,14 @@ input, button {
     margin: 10px;
     border-radius: 10px;
     border: 1px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 button {
     background-color: #aaaaaa;
     border: 2px solid #ffffff;
     font-weight: bold;
+    color: #3A3A3C;
 }
 
 
