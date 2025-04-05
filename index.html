@@ -17,5 +17,38 @@
                 <button>SPIEL STARTEN</button>
             </form>
         </div>
+        <div id="game-screen">
+            <div id="display-player1" class="display-player">Name Spieler 1</div>
+            <div id="game-area">
+              <table>
+                  <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                  </tr>
+                </table>
+                <p><a href="index.html" target="_self">Neues Spiel starten</a></p>
+            </div>
+            <div id="display-player2" class="display-player">Name Spieler 2</div>
+        </div>
+        <script>
+          if (getUrlParam("status")=="start-game") {
+            document.getElementById("game-screen").style.display = "flex";
+            document.getElementById("start-screen").style.display = "none";
+          } else {
+            document.getElementById("game-screen").style.display = "none";
+            document.getElementById("start-screen").style.display = "flex"; 
+          }
+        </script>
     </body>
 </html>

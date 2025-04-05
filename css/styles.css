@@ -4,7 +4,7 @@ body{
 }
 
 #start-screen {
-    display: flex;
+    display: none;
     justify-content: center; 
     align-items: center; 
     flex-direction: column;
@@ -12,6 +12,19 @@ body{
     border-color: aliceblue;
     border-radius: 10px;
     width: 550px;
+    background-color: #3A3A3C;
+    padding: 15px;
+    margin: 100px auto;
+}
+
+#game-screen {
+    display: none;
+    justify-content: space-between; 
+    align-items: center; 
+    border-style: solid;
+    border-color: aliceblue;
+    border-radius: 10px;
+    width: 750px;
     background-color: #3A3A3C;
     padding: 15px;
     margin: 100px auto;
@@ -54,7 +67,36 @@ button {
     color: #ffffff;
 }
 
+table {
+    border-collapse: collapse;
+    width: 200px;
+    height: 200px;
+}
 
+td {
+    border: 1px solid;
+    border-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+  }
+
+p{
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+}
+
+.display-player{
+    color: #ffffff;
+    font-size: 24px;
+}
+
+#display-player1,
+#game-area, 
+#display-player2 {
+    padding: 30px;
+}
 
 
 
