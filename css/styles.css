@@ -19,15 +19,20 @@ body{
 
 #game-screen {
     display: none;
-    justify-content: space-between; 
     align-items: center; 
     border-style: solid;
     border-color: aliceblue;
     border-radius: 10px;
-    width: 750px;
+    width: 850px;
     background-color: #3A3A3C;
     padding: 15px;
     margin: 100px auto;
+}
+
+#game-main-screen {
+    display: flex;
+    justify-content: space-between; 
+    align-items: top center; 
 }
 
 h1 {
@@ -36,12 +41,20 @@ h1 {
     text-align: center;
 }
 
-.logo-image {
+.logo-image, .logo-image-large {
+    background-origin: content-box;
     background-image: url("../img/logo_kreis.png");
     background-size: 80px;
     background-repeat: no-repeat;
     padding-left: 80px;
+}
 
+.logo-image {
+    background-position: -80px 0px;
+}
+
+.logo-image-large {
+    background-position: 114px 0px;
 }
 
 form {
@@ -95,7 +108,34 @@ p{
 #display-player1,
 #game-area, 
 #display-player2 {
-    padding: 30px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+#game-area {
+    width: 360px;
+    height: 360px;
+    background: #ffffff;
+    padding: 0;
+    margin-bottom: 30px;
+    background-image: url("../img/game-background.png");
+    background-repeat: no-repeat;
+    border: 10px solid #111111;
+    border-radius: 10px;
+}
+
+.link-right {
+    justify-content:right;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 
