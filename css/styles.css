@@ -1,7 +1,53 @@
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------------- HTML Tags ------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color:black; 
 }
+
+h1 {
+    font-size: 70px;
+    color: #ffffff;
+    text-align: center;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input, button {
+    height: 45px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px;
+    font-size: 25px;
+}
+
+button {
+    background-color: #111111;
+    border: 2px solid #ffffff;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------------- DIV ID's -------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
 
 #start-screen {
     display: none;
@@ -35,76 +81,6 @@ body{
     align-items: top center; 
 }
 
-h1 {
-    font-size: 70px;
-    color: #ffffff;
-    text-align: center;
-}
-
-.logo-image, .logo-image-large {
-    background-origin: content-box;
-    background-image: url("../img/logo_kreis.png");
-    background-size: 80px;
-    background-repeat: no-repeat;
-    padding-left: 80px;
-}
-
-.logo-image {
-    background-position: -80px 0px;
-}
-
-.logo-image-large {
-    background-position: 114px 0px;
-}
-
-form {
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-input, button {
-    height: 45px;
-    text-align: center;
-    margin: 10px;
-    border-radius: 10px;
-    border: 1px;
-    font-size: 25px;
-}
-
-button {
-    background-color: #111111;
-    border: 2px solid #ffffff;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-table {
-    border-collapse: collapse;
-    width: 200px;
-    height: 200px;
-}
-
-td {
-    border: 1px solid;
-    border-color: #ffffff;
-    text-align: center;
-    vertical-align: middle;
-    color: #ffffff;
-  }
-
-p{
-    color: #ffffff;
-    text-align: center;
-    display: flex;
-}
-
-.display-player{
-    color: #ffffff;
-    font-size: 24px;
-}
-
 #display-player1,
 #game-area, 
 #display-player2 {
@@ -125,6 +101,31 @@ p{
     border-radius: 10px;
 }
 
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------------- Klassen --------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+
+.logo-image, .logo-image-large {
+    background-origin: content-box;
+    background-image: url("../img/logo_kreis.png");
+    background-size: 80px;
+    background-repeat: no-repeat;
+    padding-left: 80px;
+}
+
+.logo-image {
+    background-position: -80px 0px;
+}
+
+.logo-image-large {
+    background-position: 114px 0px;
+}
+
+.display-player{
+    color: #ffffff;
+    font-size: 24px;
+}
+
 .game-picture{
     width: 120px;
     height: 117px;
@@ -138,14 +139,6 @@ p{
     justify-content:right;
 }
 
-a:link, a:visited, a:hover, a:active {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
 
 
 

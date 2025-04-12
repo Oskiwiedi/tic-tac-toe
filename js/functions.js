@@ -5,7 +5,16 @@ function getUrlParam (name) {
     return c;
 }
 
+function generatePictures () {
+  let htmlText = "";
+  for (let i = 1; i < 10; i++) {
+    htmlText = htmlText + '<img src="img/blank.png" id="pic' + i + '" class="game-picture" />';
+  }
+  $("#game-area").html(htmlText);
+}
+
 $( document ).ready(function() {
+
     if (getUrlParam("status")=="start-game") {
 
         // Start-Div ausblenden und Spiel-Div einblenden
@@ -13,8 +22,8 @@ $( document ).ready(function() {
         $("#start-screen").css('display', 'none');
 
         // Spieler-Namen aus der URL auslesen und einsetzen 
-        $("#display-player1").html(getUrlParam("name-player-1"));
-        $("#display-player2").html(getUrlParam("name-player-2"));
+        $("#display-player1").html(getUrlParam("name-player-1") + '<br /><img src="img/cross.png" />');
+        $("#display-player2").html(getUrlParam("name-player-2") + '<br /><img src="img/circle.png" />');
 
         //9 Bilder in Game-Area einfügen
         generatePictures();
@@ -27,11 +36,3 @@ $( document ).ready(function() {
 
       }
 });
-
-function generatePictures () {
-  let htmlText = "";
-  for (let i = 1; i < 10; i++) {
-    htmlText = htmlText + '<img src="img/blank.png" id="pic' + i + '" class="game-picture" />';
-  }
-  $("#game-area").html(htmlText);
-}
