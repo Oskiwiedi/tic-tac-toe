@@ -136,7 +136,8 @@ button {
 }
 
 .link-right {
-    justify-content:right;
+    justify-content: right;
+    border: 1px solid red;
 }
 
 

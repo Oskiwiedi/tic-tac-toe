@@ -28,6 +28,9 @@ $( document ).ready(function() {
         //9 Bilder in Game-Area einfügen
         generatePictures();
 
+        // Startspieler durch Zufall bestimmer 
+        activePlayer = Math.floor(Math.random() * 2)+1;
+
       } else {
 
         // Start-Div eonblenden und Spiel-Div ausblenden
