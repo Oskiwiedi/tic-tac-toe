@@ -17,7 +17,6 @@ function generatePictures () {
 }
 
 function checkImage(imageId) {
-  
   if (imageStatus[imageId]=="") {
     imageStatus[imageId] = activePlayer;
     if ( activePlayer == 1 ) {
@@ -27,9 +26,48 @@ function checkImage(imageId) {
       $("#pic"+imageId).attr("src","img/circle.png");
       activePlayer = 1;
     }
+    checkWin();
     $("#game-message").html(getUrlParam("name-player-"+activePlayer)+" ist am Zug");
   }
-  
+}
+
+function checkWin() {
+  if (imageStatus[1] != "") {
+    if (imageStatus[1] == imageStatus[2] && imageStatus[2] == imageStatus[3] )
+      checkOutWin();
+    if (imageStatus[1] == imageStatus[4] && imageStatus[4] == imageStatus[7] )
+      checkOutWin();
+    if (imageStatus[1] == imageStatus[5] && imageStatus[5] == imageStatus[9] )
+      checkOutWin();
+  }
+  if (imageStatus[5] != "") {
+    if (imageStatus[5] == imageStatus[2] && imageStatus[5] == imageStatus[8] )
+      checkOutWin();
+    if (imageStatus[5] == imageStatus[4] && imageStatus[5] == imageStatus[6] )
+      checkOutWin();
+  }
+  if (imageStatus[7] != "") {
+    if (imageStatus[7] == imageStatus[5] && imageStatus[7] == imageStatus[3] )
+      checkOutWin();
+    if (imageStatus[7] == imageStatus[8] && imageStatus[7] == imageStatus[9] )
+      checkOutWin();
+  }
+  if (imageStatus[3] != "") {
+    if (imageStatus[3] == imageStatus[6] && imageStatus[3] == imageStatus[9] )
+      checkOutWin();
+  }
+}
+
+function checkOutWin() {
+  if ( activePlayer == 1 )
+    activePlayer = 2;
+  else 
+     activePlayer = 1;
+  $("#game-message").html(getUrlParam("name-player-"+activePlayer)+" hat gewonnen!");
+  for (let i = 1; i < 10; i++)
+    if (imageStatus[i] == "")
+      imageStatus[i] = 3;
+  exit();
 }
 
 $( document ).ready(function() {
