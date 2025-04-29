@@ -27,8 +27,25 @@ function checkImage(imageId) {
       activePlayer = 1;
     }
     checkWin();
+    checkEnd();
     $("#game-message").html(getUrlParam("name-player-"+activePlayer)+" ist am Zug");
   }
+}
+
+function checkEnd() {
+  if ( imageStatus[1] != "" &&
+       imageStatus[2] != "" &&
+       imageStatus[3] != "" &&
+       imageStatus[4] != "" &&
+       imageStatus[5] != "" &&
+       imageStatus[6] != "" &&
+       imageStatus[7] != "" &&
+       imageStatus[8] != "" &&
+       imageStatus[9] != ""
+   ) {
+      $("#game-message").html('Keine Züge mehr möglich - <a href="index.html?name-player-1='+ getUrlParam("name-player-1") +'&name-player-2='+ getUrlParam("name-player-2") +'&status=start-game">neues Spiel starten</a>');
+      exit();
+   }
 }
 
 function checkWin() {
@@ -63,7 +80,7 @@ function checkOutWin() {
     activePlayer = 2;
   else 
      activePlayer = 1;
-  $("#game-message").html(getUrlParam("name-player-"+activePlayer)+" hat gewonnen!");
+  $("#game-message").html(getUrlParam("name-player-"+activePlayer)+' hat gewonnen!  - <a href="index.html?name-player-1='+ getUrlParam("name-player-1") +'&name-player-2='+ getUrlParam("name-player-2") +'&status=start-game">neues Spiel starten</a>');
   for (let i = 1; i < 10; i++)
     if (imageStatus[i] == "")
       imageStatus[i] = 3;
