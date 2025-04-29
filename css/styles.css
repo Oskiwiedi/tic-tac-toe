@@ -60,7 +60,7 @@ button {
     width: 550px;
     background-color: #3A3A3C;
     padding: 15px;
-    margin: 100px auto;
+    margin: 50px auto;
 }
 
 #game-screen {
@@ -72,7 +72,7 @@ button {
     width: 850px;
     background-color: #3A3A3C;
     padding: 15px;
-    margin: 100px auto;
+    margin: 50px auto;
 }
 
 #game-main-screen {
@@ -99,6 +99,15 @@ button {
     background-repeat: no-repeat;
     border: 10px solid #111111;
     border-radius: 10px;
+}
+
+#game-message {
+    height: 50px; 
+    background-color: #575757;   
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 50px;
 }
 
 /* ------------------------------------------------------------------------------------- */
@@ -136,9 +145,9 @@ button {
 }
 
 .link-right {
-    justify-content: right;
-    border: 1px solid red;
+    text-align: right;
 }
+
 
 
 

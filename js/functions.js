@@ -1,3 +1,5 @@
+imageStatus = [];
+
 function getUrlParam (name) {
     var url_string = window.location;
     var url = new URL(url_string);
@@ -8,9 +10,26 @@ function getUrlParam (name) {
 function generatePictures () {
   let htmlText = "";
   for (let i = 1; i < 10; i++) {
-    htmlText = htmlText + '<img src="img/blank.png" id="pic' + i + '" class="game-picture" />';
-  }
+    htmlText = htmlText + '<img src="img/blank.png" id="pic' + i + '" class="game-picture" onclick="checkImage('+ i +')" />';
+    imageStatus[i] = "";
+  } 
   $("#game-area").html(htmlText);
+}
+
+function checkImage(imageId) {
+  
+  if (imageStatus[imageId]=="") {
+    imageStatus[imageId] = activePlayer;
+    if ( activePlayer == 1 ) {
+      $("#pic"+imageId).attr("src","img/cross.png");
+      activePlayer = 2;
+    } else {
+      $("#pic"+imageId).attr("src","img/circle.png");
+      activePlayer = 1;
+    }
+    $("#game-message").html(getUrlParam("name-player-"+activePlayer)+" ist am Zug");
+  }
+  
 }
 
 $( document ).ready(function() {
@@ -30,6 +49,8 @@ $( document ).ready(function() {
 
         // Startspieler durch Zufall bestimmer 
         activePlayer = Math.floor(Math.random() * 2)+1;
+
+        $("#game-message").html(getUrlParam("name-player-"+activePlayer)+" ist am Zug");
 
       } else {
 
