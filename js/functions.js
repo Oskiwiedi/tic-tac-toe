@@ -43,7 +43,8 @@ function checkEnd() {
        imageStatus[8] != "" &&
        imageStatus[9] != ""
    ) {
-      $("#game-message").html('Keine Züge mehr möglich - <a href="index.html?name-player-1='+ getUrlParam("name-player-1") +'&name-player-2='+ getUrlParam("name-player-2") +'&status=start-game">neues Spiel starten</a>');
+      $("#game-message").html("Keine Züge mehr möglich");
+      $("#link-right").html('<a href="index.html?name-player-1='+ getUrlParam("name-player-1") +'&name-player-2='+ getUrlParam("name-player-2") +'&status=start-game">neues Spiel starten</a> | <a href="index.html" target="_self">Spiel beenden</a>');
       exit();
    }
 }
@@ -80,7 +81,8 @@ function checkOutWin() {
     activePlayer = 2;
   else 
      activePlayer = 1;
-  $("#game-message").html(getUrlParam("name-player-"+activePlayer)+' hat gewonnen!  - <a href="index.html?name-player-1='+ getUrlParam("name-player-1") +'&name-player-2='+ getUrlParam("name-player-2") +'&status=start-game">neues Spiel starten</a>');
+  $("#game-message").html(getUrlParam("name-player-"+activePlayer)+' hat gewonnen!');
+  $("#link-right").html('<a href="index.html?name-player-1='+ getUrlParam("name-player-1") +'&name-player-2='+ getUrlParam("name-player-2") +'&status=start-game">neues Spiel starten</a> | <a href="index.html" target="_self">Spiel beenden</a>');
   for (let i = 1; i < 10; i++)
     if (imageStatus[i] == "")
       imageStatus[i] = 3;
